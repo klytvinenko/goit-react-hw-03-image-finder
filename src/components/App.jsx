@@ -31,8 +31,8 @@ export class App extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    if(prevState.query !== prevProps.query ||
-      prevState.page !== prevProps.page) 
+    if(prevState.query !== this.state.query ||
+      prevState.page !== this.state.page) 
       {
         this.setState({loading:true});
         fetchImg(this.state.query, this.state.page)
